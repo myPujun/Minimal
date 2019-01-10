@@ -33,8 +33,9 @@ App({
       }
     })
   },
-  globalData: {
-    userInfo: null,
-    localCity:null,
-  }
+    globalData: {
+        winBgIsPlay:false,
+        bgSongMessage:{},
+        songPlayId:null
+    },
 })

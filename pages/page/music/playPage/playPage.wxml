@@ -1,24 +1,31 @@
 <!--pages/page/music/playPage/playPage.wxml-->
 <view class="playContent">
     <view class="topMessage flex_column">  
-        <text class="songName">一个人的北京</text>
-        <text class="author">海明威</text>
+        <text class="songName">{{songDetails.name}}</text>
+        <view class="authors flex">
+            <text class="author" wx:for="{{songDetails.author}}" wx:key="{{index}}">{{item}}</text>
+        </view>
+        
     </view>
-    <view class="songImages">  
-        <image src="../../../images/column_img.png"></image>
+    <view class="songImages {{isPlay?'songImagesRotate':''}}">  
+        <image src="{{songDetails.img}}"></image>
     </view>
     <view class="section section_gap">
-        <view class="time">3:12</view>
+        <view class="time flex">
+            <text class="currentTime">{{current.currentTime}}</text>
+            <text class="duration">{{current.duration}}</text>
+        </view>
         <view class="body-view">
-            <slider block-size="12" activeColor="#3dcc9c" block-color="#3dcc9c" left-icon="cancel" right-icon="success_no_circle" />
+            <slider block-size="12" max="{{current.sumDuration}}" value="{{current.sumCurrentTime}}"  activeColor="#3dcc9c" block-color="#3dcc9c"bindchange="timeSliderChanged"  bindchanging="timeSliderChanged" />
         </view>
     </view>
     <view class="playIcon flex">
         <i class="iconfont icon-xunhuan"></i>
         <i class="iconfont icon-shangyishou"></i>
-        <i class="iconfont icon-bofang isPlay"></i>
+        <i class="iconfont  icon-zanting isPlay" wx:if="{{isPlay}}" bind:tap="audioPause"></i>
+        <i class="iconfont icon-bofang isPlay"  wx:else bind:tap="audioPlayed"></i>
         <i class="iconfont icon-xiayishou"></i>
         <i class="iconfont icon-caidan"></i>
     </view>
 </view>
-<audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>
+<!-- <audio id="myAudio" src="{{current.url}}" bindtimeupdate="audioTimeUpdated"  bindended="audioTimeStop"></audio> -->

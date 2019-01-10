@@ -1,4 +1,11 @@
 /* pages/page/music/playPage/playPage.wxss */
+#myAudio{
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0;
+}
 .topMessage{
     width: 500rpx;
     margin: 0 auto;
@@ -9,22 +16,36 @@
 }
 .topMessage .songName{
     font-size: 30rpx;
-    color: #333;
+    color: #3dcc9c;
+}
+.topMessage .authors{
+    justify-content: center;
 }
 .topMessage .author{
     color:#8a8a8a;
-    margin-top: 25rpx;
-    font-size: 24rpx;
+    margin:0 10rpx;
+    margin-top:25rpx;
+    padding:5rpx 15rpx;
+    border:1px solid #8a8a8a;
+    font-size:24rpx;
+    border-radius:40rpx;
 }
 .songImages{
     position: relative;
     width: 378rpx;
     height: 378rpx;
-    padding: 25rpx;
-    border: 2px solid #3dcc9c; 
+    padding: 50rpx;
+    background-color: #3dcc9c;
     margin: 0 auto;
     border-radius: 50%;
     overflow: hidden;
+}
+.songImagesRotate{
+    -webkit-transform: rotate(360deg);
+    animation: rotation 10s linear infinite;
+    -moz-animation: rotation 10s linear infinite;
+    -webkit-animation: rotation 10s linear infinite;
+    -o-animation: rotation 10s linear infinite;
 }
 .songImages::after{
     content: "";
@@ -64,7 +85,15 @@
 } 
 .section_gap .time{
     width: 100%;
+    justify-content: space-between;
     text-align: right;
     font-size: 30rpx;
     color: #3dcc9c;
+}
+.section_gap .time .duration{
+    color: #8a8a8a;
+}
+@-webkit-keyframes rotation{
+    from {-webkit-transform: rotate(0deg);}
+    to {-webkit-transform: rotate(360deg);}
 }

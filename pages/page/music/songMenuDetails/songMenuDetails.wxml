@@ -21,7 +21,7 @@
             </view>
         </view>
         <view class="list">
-            <view class="li flex {{activeIndex==index?'active':''}}" wx:for="{{playlist.tracks}}" 
+            <navigator url="../playPage/playPage?id={{item.id}}" class="li flex {{activeIndex==index?'active':''}}" wx:for="{{playlist.tracks}}" 
             data-index="{{index}}" wx:key="{{item.id}}" bindtap="clickPlay">
                 <view class="images">
                     <image src="{{item.al.picUrl}}"></image>
@@ -32,7 +32,7 @@
                         <block wx:for="{{item.ar}}" wx:for-item="authorName" wx:key="authorName.id">{{authorName.name}}</block>
                     </text>
                 </view>
-            </view>
+            </navigator>
         </view>
     </view>
 </scroll-view>
