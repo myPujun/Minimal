@@ -1,0 +1,6 @@
+{
+    "usingComponents": {
+        "suspensionPlay": "../../../components/suspensionPlay/suspensionPlay"
+    },
+    "navigationBarTitleText": "歌单"
+}

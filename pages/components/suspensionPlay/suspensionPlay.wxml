@@ -1,0 +1,5 @@
+<navigator url="" class="suspension" hover-class="none">
+    <i class="iconfont {{musicPlay?'icon-zanting':'icon-bofang'}}"></i>
+    <image src="../../images/column_img.png"></image>
+</navigator>
+

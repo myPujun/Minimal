@@ -1,0 +1,44 @@
+{
+  "pages": [
+    "pages/page/music/musicIndex/musicIndex",
+    "pages/page/music/songMenuDetails/songMenuDetails",
+    "pages/components/suspensionPlay/suspensionPlay",
+    "pages/page/music/playPage/playPage"
+  ],
+  "tabBar": {
+    "color": "#3c3b43",
+    "selectedColor": "#3dcc9c",
+    "backgroundColor": "#fff",
+    "borderStyle": "#e6e6e6",
+    "list": [
+      {
+        "pagePath": "pages/page/music/musicIndex/musicIndex",
+        "iconPath": "pages/images/music.png",
+        "selectedIconPath": "pages/images/music_active.png",
+        "text": "音乐馆"
+      },
+      {
+        "pagePath": "pages/page/music/musicIndex/musicIndex",
+        "iconPath": "pages/images/movie.png",
+        "selectedIconPath": "pages/images/movie_active.png",
+        "text": "电影馆"
+      },
+      {
+        "pagePath": "pages/page/music/musicIndex/musicIndex",
+        "iconPath": "pages/images/my.png",
+        "selectedIconPath": "pages/images/my_active.png",
+        "text": "我的"
+      }
+    ]
+  },
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#3dcc9c",
+    "navigationBarTitleText": "水电专家",
+    "navigationBarTextStyle": "white",
+    "backgroundColor": "#f7f7f7"
+  },
+  "networkTimeout": {
+    "request": 15000
+  }
+}

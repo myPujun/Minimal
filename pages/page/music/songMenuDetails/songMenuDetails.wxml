@@ -1,0 +1,45 @@
+<scroll-view  scroll-y  bindscroll="songListScroll" class="scroll_content">
+    <view class="topSongMent">
+        <view class="songMentMessage flex" wx:key="">
+            <view class="images">
+                <image src="{{playlist.coverImgUrl}}"></image>
+            </view>
+            <view class="intro flex">
+                <text class="songMentName">{{playlist.name}}</text>
+                <text class="Description">{{playlist.description}}</text>
+                <view class="songMentType flex">
+                    <text wx:for="{{playlist.tags}}" wx:key="{{index}}">{{item}}</text>
+                </view>
+            </view>
+        </view>
+    </view>
+    <view class="songList">
+        <view class="topMessage flex">
+            <view class="playAll flex flex_align_center" bindtap="allPlay">
+                <i class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}}"></i>
+                <text>全部播放{{songListLength}}首</text>
+            </view>
+        </view>
+        <view class="list">
+            <view class="li flex {{activeIndex==index?'active':''}}" wx:for="{{playlist.tracks}}" 
+            data-index="{{index}}" wx:key="{{item.id}}" bindtap="clickPlay">
+                <view class="images">
+                    <image src="{{item.al.picUrl}}"></image>
+                </view>
+                <view class="message flex_column">
+                    <text class="name">{{item.name}}</text>
+                    <text class="author">
+                        <block wx:for="{{item.ar}}" wx:for-item="authorName" wx:key="authorName.id">{{authorName.name}}</block>
+                    </text>
+                </view>
+            </view>
+        </view>
+    </view>
+</scroll-view>
+<suspensionPlay defaultValue="{{isPlay}}" id="suspensionPlay"></suspensionPlay>
+<view class="topMessage flex {{isShow?'scroll_top':''}}" wx:if="{{isShow}}" bindtap="allPlay"> 
+    <view class="playAll flex flex_align_center">
+        <i class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}}"></i>
+        <text>全部播放{{songListLength}}首</text>
+    </view>
+</view>

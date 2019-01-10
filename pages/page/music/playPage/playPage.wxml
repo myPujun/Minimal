@@ -1,0 +1,24 @@
+<!--pages/page/music/playPage/playPage.wxml-->
+<view class="playContent">
+    <view class="topMessage flex_column">  
+        <text class="songName">一个人的北京</text>
+        <text class="author">海明威</text>
+    </view>
+    <view class="songImages">  
+        <image src="../../../images/column_img.png"></image>
+    </view>
+    <view class="section section_gap">
+        <view class="time">3:12</view>
+        <view class="body-view">
+            <slider block-size="12" activeColor="#3dcc9c" block-color="#3dcc9c" left-icon="cancel" right-icon="success_no_circle" />
+        </view>
+    </view>
+    <view class="playIcon flex">
+        <i class="iconfont icon-xunhuan"></i>
+        <i class="iconfont icon-shangyishou"></i>
+        <i class="iconfont icon-bofang isPlay"></i>
+        <i class="iconfont icon-xiayishou"></i>
+        <i class="iconfont icon-caidan"></i>
+    </view>
+</view>
+<audio src="{{current.src}}" poster="{{current.poster}}" name="{{current.name}}" author="{{current.author}}" action="{{audioAction}}" bindplay="audioPlayed" bindtimeupdate="audioTimeUpdated" controls></audio>

@@ -1,0 +1,74 @@
+/**阿里巴巴图标**/
+@font-face {font-family: "iconfont";
+  src: url('//at.alicdn.com/t/font_1004130_b70dgyk40nv.eot?t=1547026732546'); /* IE9 */
+  src: url('//at.alicdn.com/t/font_1004130_b70dgyk40nv.eot?t=1547026732546#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('data:application/x-font-woff2;charset=utf-8;base64,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') format('woff2'),
+  url('//at.alicdn.com/t/font_1004130_b70dgyk40nv.woff?t=1547026732546') format('woff'),
+  url('//at.alicdn.com/t/font_1004130_b70dgyk40nv.ttf?t=1547026732546') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+ */
+  url('//at.alicdn.com/t/font_1004130_b70dgyk40nv.svg?t=1547026732546#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+  font-family: "iconfont" !important;
+  font-size: 16px;
+  font-style: normal;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-shangyishou:before {
+  content: "\e62a";
+}
+
+.icon-xiayishou:before {
+  content: "\e601";
+}
+
+.icon-zanting:before {
+  content: "\e621";
+}
+
+.icon-caidan:before {
+  content: "\e712";
+}
+
+.icon-tuijiangedan:before {
+  content: "\e600";
+}
+
+.icon-gedan:before {
+  content: "\e66a";
+}
+
+.icon-bofang:before {
+  content: "\e656";
+}
+
+.icon-xunhuan:before {
+  content: "\e675";
+}
+
+.icon-paihangbang:before {
+  content: "\e6a9";
+}
+
+
+
+
+
+
+
+/**app.wxss**/
+.container {
+    font-size: 24rpx;
+} 
+.flex{
+    display: flex;
+}
+.flex_align_center{
+    align-items: center;
+}
+.flex_column{
+    display: flex;
+    flex-direction: column;
+}
