@@ -1,0 +1,21 @@
+<!--pages/page/music/videoPlay/playPage.wxml-->
+<view class="myVideo">
+    <video src="{{viedoDetails.brs[240]}}" controls></video>
+    <view class="videoMessage flex_column">
+        <text class="mvName">{{viedoDetails.name}}</text>
+        <text class="userName">{{viedoDetails.artistName}}</text>
+        <text class="time">{{viedoDetails.publishTime}}</text>
+    </view>
+</view>
+<view class="mv_list">
+    <view class="li flex flex_align_center" wx:for="{{coverList}}" wx:key="{{index}}" >
+        <view class="img">
+            <image src="{{item.coverUrl}}" mode="aspectFill" binderror="" bindload=""></image>
+            <i class="iconfont icon-bofang"></i>
+        </view>
+        <view class="message flex_column">
+            <text class="mvName">{{item.title}}</text>
+            <text class="userName">{{item.creator[0].userName}}</text>
+        </view>
+    </view>
+</view>

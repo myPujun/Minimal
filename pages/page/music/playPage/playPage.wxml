@@ -1,7 +1,6 @@
 <!--pages/page/music/playPage/playPage.wxml-->
 <view class="playContent">
     <view class="topMessage flex_column">  
-        <text class="songName">{{songDetails.name}}</text>
         <view class="authors flex">
             <text class="author" wx:for="{{songDetails.author}}" wx:key="{{index}}">{{item}}</text>
         </view>

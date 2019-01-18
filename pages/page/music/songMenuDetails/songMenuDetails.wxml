@@ -17,7 +17,7 @@
         <view class="topMessage flex">
             <view class="playAll flex flex_align_center" bindtap="allPlay">
                 <i class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}}"></i>
-                <text>全部播放{{songListLength}}首11123</text>
+                <text>全部播放{{songListLength}}首</text>
             </view>
         </view>
         <view class="list">

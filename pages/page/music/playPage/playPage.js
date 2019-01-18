@@ -8,7 +8,8 @@ Page({
         },
         songId:null,
         songDetails:{},
-        isPlay:false
+        isPlay:false,
+        songTitle:'',
     },
     /**
      * 生命周期函数--监听页面加载
@@ -49,6 +50,9 @@ Page({
                         img: item.al.picUrl
                     }
                 })
+            })
+            wx.setNavigationBarTitle({
+                title:this.data.songDetails.name,
             })
             this.playAudio()
         })

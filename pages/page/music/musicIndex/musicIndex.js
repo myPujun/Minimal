@@ -1,30 +1,29 @@
 //index.js
 //获取应用实例
-import API from '../../../../utils/API'
+import Sever from './musicIndexSever'
 Page({
     data:{
         BoutiqueList:[],
-        HotSongList:[],
+        recommendList:[],
+        newSongList:[]
     },
     onShow(){
         const _this = this
-        API({
-            url:'/top/playlist/highquality?before=1503639064232&limit=6'
-        }).then(res => {
-            console.log(res)
-            wx.setStorage({
-                key: 'BoutiqueList',
-                data: res.playlists,
-            })
+        Sever.getBoutique().then(res => {
             _this.setData({
                 BoutiqueList: res.playlists
             })
-        });
-        API({
-            url:'/playlist/hot'
-        }).then(res => {
+        })
+        Sever.getRecommend().then(res => {
             _this.setData({
-                HotSongList:res
+                recommendList: res.result
+            })
+        })
+        Sever.getNewSong().then(res => {
+            let newSongList = res.result
+            newSongList.splice(6)
+            _this.setData({
+                newSongList
             })
         })
     }

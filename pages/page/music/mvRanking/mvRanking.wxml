@@ -1,0 +1,13 @@
+<!--pages/page/music/mvRanking/mvRanking.wxml-->
+<view class="mv_list">
+    <navigator url="../videoPlay/videoPlay?id={{item.id}}" class="li flex flex_align_center" wx:for="{{rankingList}}" wx:key="{{index}}" data-id="{{item.id}}">
+        <view class="img">
+            <image src="{{item.cover}}" mode="aspectFill" binderror="" bindload=""></image>
+            <i class="iconfont icon-bofang"></i>
+        </view>
+        <view class="message flex_column">
+            <text class="mvName">{{item.name}}</text>
+            <text class="userName">{{item.artistName}}</text>
+        </view>
+    </navigator>
+</view>

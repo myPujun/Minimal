@@ -76,6 +76,6 @@ Page({
         this.childrenIsPlay()
     },
     childrenIsPlay(){
-        this.selectComponent("#suspensionPlay").isplay();
+        
     }
 })
