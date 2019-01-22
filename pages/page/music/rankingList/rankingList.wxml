@@ -1,0 +1,9 @@
+<!--pages/page/music/rankingList/rankingList.wxml-->
+<view class="ranking_list">
+    <view class="li flex flex_align_center" wx:for="{{rankingList}}" wx:key="{{index}}">
+        <view class="images">
+            <image src="{{item.coverImgUrl}}" mode="widthFix"></image>
+        </view>
+        <text class="message">{{item.description?item.description:item.name}}</text>
+    </view>
+</view>

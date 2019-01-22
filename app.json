@@ -5,7 +5,9 @@
     "pages/components/suspensionPlay/suspensionPlay",
     "pages/page/music/playPage/playPage",
     "pages/page/music/mvRanking/mvRanking",
-    "pages/page/music/videoPlay/videoPlay"
+    "pages/page/music/videoPlay/videoPlay",
+    "pages/page/music/search/search",
+    "pages/page/music/rankingList/rankingList"
   ],
   "tabBar": {
     "color": "#3c3b43",

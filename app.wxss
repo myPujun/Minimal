@@ -65,6 +65,9 @@
 .flex{
     display: flex;
 }
+.flex_wrap{
+    flex-wrap: wrap;
+}
 .flex_align_center{
     align-items: center;
 }

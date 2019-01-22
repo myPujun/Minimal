@@ -1,12 +1,11 @@
-// pages/page/music/videoPlay/playPage.js
-import Sever from './videoPlaySever'
+// pages/page/music/rankingList/rankingList.js
+import Sever from './rankingListSever'
 Page({
     /**
      * 页面的初始数据
      */
     data: {
-        viedoDetails:{},
-        hotComments:[]
+        rankingList:[]
     },
 
     /**
@@ -14,20 +13,13 @@ Page({
      */
     onLoad: function (options) {
         let _this = this
-        Sever.getVideoId(options.id).then(res => {
-            console.log(res)
+        Sever.getRankingList().then(res => {
+            console.log(res.list)
             _this.setData({
-                viedoDetails:res.data
+                rankingList:res.list
             })
         })
-        Sever.getHotComment(options.id).then(res => {
-            _this.setData({
-                hotComments: res.hotComments
-            })
-        })
-        wx.setNavigationBarTitle({
-            title: 'MV',
-        })
+
     },
 
     /**

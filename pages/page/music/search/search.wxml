@@ -1,0 +1,26 @@
+<!--pages/page/music/search/search.wxml-->
+<view class="topSsearch flex">
+    <view class="search flex">
+        <input value=""  bindinput="changSearch" focus="true" bindconfirm="searchBtn" type="text"  confirm-type="search" placeholder-class="searchIcon" placeholder="搜索音乐、歌手" value="{{inpueValue}}"></input>
+    </view>
+</view>
+<view class="suggest_list" wx:if="{{isSuggest}}">
+    <view class="li" wx:for="{{suggestList}}" bindtap="clickSuggest" data-value="{{item.keyword}}" wx:key="{{index}}">{{item.keyword}}</view>
+</view>
+<view class="hot_list flex flex_wrap" wx:if="{{isHot}}">
+    <text wx:for="{{hotList}}" wx:key="{{index}}" bindtap="clickSuggest" data-value="{{item.first}}">{{item.first}}</text>
+</view>
+<view class="songList">
+    
+    <view class="list">
+        <navigator url="../playPage/playPage?id={{item.id}}" class="li flex" wx:for="{{searchList}}" wx:key="{{index}}">
+            <view class="images">
+                <image src="{{item.artists[0].img1v1Url}}"></image>
+            </view>
+            <view class="message flex_column">
+                <text class="name">{{item.name}}</text>
+                <text class="author">{{item.artists[0].name}}</text>
+            </view>
+        </navigator>
+    </view>
+</view>

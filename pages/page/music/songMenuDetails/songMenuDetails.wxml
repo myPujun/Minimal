@@ -36,7 +36,7 @@
         </view>
     </view>
 </scroll-view>
-<suspensionPlay defaultValue="{{isPlay}}" id="suspensionPlay"></suspensionPlay>
+<!-- <suspensionPlay defaultValue="{{isPlay}}" id="suspensionPlay"></suspensionPlay> -->
 <view class="topMessage flex {{isShow?'scroll_top':''}}" wx:if="{{isShow}}" bindtap="allPlay"> 
     <view class="playAll flex flex_align_center">
         <i class="iconfont {{isPlay?'icon-zanting':'icon-bofang'}}"></i>

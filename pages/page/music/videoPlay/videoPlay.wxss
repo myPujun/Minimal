@@ -1,7 +1,7 @@
 /* pages/page/music/videoPlay/playPage.wxss */
 .myVideo video{
     width: 100%;
-    height: 500rpx;
+    height: 400rpx;
     overflow: hidden;
 }
 .videoMessage{
@@ -69,4 +69,45 @@
     color: #999;
     font-size: 26rpx;
     margin-top: 20rpx;
+}
+.comment_list .title{
+    position: relative;
+    font-size: 32rpx;
+    color: #333;
+    padding: 25rpx;
+    text-align: center;
+    color: #3dcc9c;
+}
+.comment_list .title:after{
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    margin-left: -40rpx;
+    width: 80rpx;
+    height: 5rpx;
+    background-color: #3dcc9c;
+}
+.comment_list .li{
+    margin: 25rpx;
+    padding: 25rpx;
+    border-radius: 10rpx;
+    box-shadow: 0px 0px 20rpx rgba(0,0,0,.08);
+}
+.comment_list .head{
+    width: 100rpx;
+    height: 100rpx;
+    min-width: 100rpx;
+    border-radius: 50%;
+    margin-right: 25rpx;
+    overflow: hidden;
+}
+.comment_list .message .userName{
+    font-size: 30rpx;
+    color: #333;
+}
+.comment_list .message .content{
+    font-size: 26rpx;
+    color: #999;
+    margin-top: 10rpx;
 }

@@ -37,7 +37,7 @@
 			"list": []
 		},
 		"miniprogram": {
-			"current": 6,
+			"current": 7,
 			"list": [
 				{
 					"id": 0,
@@ -70,15 +70,21 @@
 					"query": ""
 				},
 				{
-					"id": 5,
+					"id": -1,
 					"name": "播放MV",
-					"pathName": "pages/page/music/videoPlay/playPage",
+					"pathName": "pages/page/music/videoPlay/videoPlay",
 					"query": ""
 				},
 				{
 					"id": -1,
-					"name": "播放MV",
-					"pathName": "pages/page/music/videoPlay/videoPlay",
+					"name": "音乐搜索",
+					"pathName": "pages/page/music/search/search",
+					"query": ""
+				},
+				{
+					"id": -1,
+					"name": "排行榜",
+					"pathName": "pages/page/music/rankingList/rankingList",
 					"query": ""
 				}
 			]

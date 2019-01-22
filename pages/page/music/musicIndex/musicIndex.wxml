@@ -1,29 +1,32 @@
 <!--index.wxml-->
-<view class="topSsearch flex">
+<navigator url="../search/search" class="topSsearch flex">
     <view class="search flex">
-        <input value="" type="text" placeholder-class="searchIcon" placeholder="推荐 电台 主播"></input>
+        <input type="text" placeholder-class="searchIcon" placeholder="搜索音乐、歌手" disabled="{{true}}"></input>
     </view>
-</view>
+</navigator>
 <view class="container">
     <view class="banner_swiper">
-        <swiper  indicator-dots  indicator-color="rgba(225,255,255,.5)"  indicator-active-color="#3dcc9c" autoplay="false" interval="5000" duration="1000" bindchange="">
+        <swiper  indicator-dots  indicator-color="rgba(225,255,255,.5)"  indicator-active-color="#3dcc9c" autoplay="false"  circular="true" previous-margin="25rpx" next-margin="25rpx" interval="5000" duration="1000" bindchange="">
             <swiper-item>
                 <image src="../../../images/banner_1.png"></image>
             </swiper-item>
             <swiper-item>
-                <image src="../../../images/banner_1.png"></image>
+                <image src="../../../images/banner_2.png"></image>
+            </swiper-item>
+            <swiper-item>
+                <image src="../../../images/banner_3.png"></image>
             </swiper-item>
         </swiper>
         <view class="nav_list flex">
             <navigator url="../mvRanking/mvRanking" class="flex" hover-class="none">
                 <i class="iconfont  icon-tuijiangedan"></i>
-                <text>推荐MV</text>
+                <text>MV排行</text>
             </navigator>
             <navigator url="" class="flex" hover-class="none">
                 <i class="iconfont  icon-gedan"></i>
                 <text>歌单</text>
             </navigator>
-            <navigator url="" class="flex" hover-class="none">
+            <navigator url="../rankingList/rankingList" class="flex" hover-class="none">
                 <i class="iconfont icon-paihangbang"></i>
                 <text>排行榜</text>
             </navigator>

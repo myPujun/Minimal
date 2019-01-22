@@ -7,15 +7,15 @@
         <text class="time">{{viedoDetails.publishTime}}</text>
     </view>
 </view>
-<view class="mv_list">
-    <view class="li flex flex_align_center" wx:for="{{coverList}}" wx:key="{{index}}" >
-        <view class="img">
-            <image src="{{item.coverUrl}}" mode="aspectFill" binderror="" bindload=""></image>
-            <i class="iconfont icon-bofang"></i>
+<view class="comment_list">
+    <view class="title">热门评论</view>
+    <view class="li flex" wx:for="{{hotComments}}" wx:key="{{index}}">
+        <view class="head flex flex_a_center flex_ju_center">
+            <image src="{{item.user.avatarUrl}}" mode="widthFix"></image>
         </view>
         <view class="message flex_column">
-            <text class="mvName">{{item.title}}</text>
-            <text class="userName">{{item.creator[0].userName}}</text>
+            <text class="userName">{{item.user.nickname}}</text>
+            <text class="content">{{item.content}}</text>
         </view>
     </view>
 </view>

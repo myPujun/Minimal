@@ -10,4 +10,9 @@ export default class{
             url: `/related/allvideo?id=${coverId}&type=1014`
         })
     }
+    static getHotComment(id){
+        return API({
+            url:`/comment/mv?id=${id}`
+        })
+    }
 }
