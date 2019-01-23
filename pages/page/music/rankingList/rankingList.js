@@ -5,7 +5,25 @@ Page({
      * 页面的初始数据
      */
     data: {
-        rankingList:[]
+        rankingList:[],
+        xids:[
+            {
+                id: 19723756,
+                xid:3
+            },
+            {
+                id: 3779629,
+                xid:0
+            },
+            {
+                id: 2884035,
+                xid:2
+            },
+            {
+                id: 3778678,
+                xid:1
+            }
+        ],
     },
 
     /**
@@ -14,9 +32,18 @@ Page({
     onLoad: function (options) {
         let _this = this
         Sever.getRankingList().then(res => {
-            console.log(res.list)
+            let rankingList = res.list
+            rankingList.splice(4)
+            rankingList.map(function(item,index){
+                _this.data.xids.forEach(function(key){
+                    if(item.id == key.id){
+                        rankingList[index] = Object.assign(rankingList[index], {xid:key.xid})
+                    }
+                })
+            })
+            console.log(rankingList)
             _this.setData({
-                rankingList:res.list
+                rankingList
             })
         })
 

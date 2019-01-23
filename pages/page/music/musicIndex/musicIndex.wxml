@@ -35,7 +35,7 @@
     <view class="">
 
     </view>
-    <view class="GuessYouLike column_content">
+    <view class="GuessYouLike column_content newMusic">
         <view class="column_title flex">
             <text class="title">推荐新音乐</text>
         </view>
@@ -43,6 +43,7 @@
             <navigator url="../playPage/playPage?id={{item.id}}" hover-class="none" class="li" wx:for="{{newSongList}}" wx:key="{{index}}">
                 <view class="images">
                     <image src="{{item.song.album.picUrl}}"></image>
+                    <i class="iconfont icon-bofang flex flex_align_center flex_ju_center"></i>
                 </view>
                 <view class="message flex">
                     <text class="songName">{{item.song.name}}</text>

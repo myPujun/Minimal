@@ -65,7 +65,7 @@
     padding: 0 25rpx;
 }
 .column_title{
-    height: 75rpx;
+    height: 80rpx;
     align-items: center;
     justify-content: space-between;
 }
@@ -80,7 +80,7 @@
 }
 .GuessYouLike .list{
     flex-wrap: wrap;
-    justify-content: space-around;
+    justify-content: space-between;
 }
 .GuessYouLike .list .li{
     margin-bottom: 25rpx;
@@ -88,12 +88,25 @@
 .GuessYouLike .list .images{
     width: 217rpx;
     height: 210rpx;
-    border-radius: 10rpx;
     overflow: hidden;
 }
 .GuessYouLike .list .images image{
     width: 100%;
     height: 100%;
+}
+.newMusic .li .images{
+    position: relative;
+}
+.newMusic .li .images .iconfont{
+    position: absolute;
+    top:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    width: 100%;
+    font-size: 80rpx;
+    background-color: rgba(0,0,0,.3);
+    color: #FFF;
 }
 .GuessYouLike .list .message{
     flex-direction: column;

@@ -26,5 +26,5 @@ Page({
                 newSongList
             })
         })
-    }
+    },
 })

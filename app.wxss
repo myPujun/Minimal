@@ -65,6 +65,12 @@
 .flex{
     display: flex;
 }
+.flex_ju_space{
+    justify-content: space-between;
+}
+.flex_ju_center{
+    justify-content: center;
+}
 .flex_wrap{
     flex-wrap: wrap;
 }

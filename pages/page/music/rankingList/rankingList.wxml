@@ -1,9 +1,18 @@
 <!--pages/page/music/rankingList/rankingList.wxml-->
 <view class="ranking_list">
-    <view class="li flex flex_align_center" wx:for="{{rankingList}}" wx:key="{{index}}">
+    <navigator url="" class="li flex flex_align_center" data-id="{{item.id}}" wx:for="{{rankingList}}" wx:key="{{index}}">
         <view class="images">
             <image src="{{item.coverImgUrl}}" mode="widthFix"></image>
         </view>
-        <text class="message">{{item.description?item.description:item.name}}</text>
-    </view>
+        <i class="hint">{{item.updateFrequency}}</i>
+        <view class="list" wx:if="{{item.tracks.length !== 0}}">
+            <block wx:for="{{item.tracks}}" wx:for-item="itemSong" wx:key="{{index}}">
+                <view class="flex flex_ju_space flex_a_center">
+                    <text class="song"><text class="index">{{index+1}}</text>{{itemSong.first}}</text>
+                    <text class="author">{{itemSong.second}}</text>
+                </view>
+            </block>
+        </view>
+        <text class="message" wx:else>{{item.description?item.description:item.name}}</text>
+    </navigator>
 </view>
